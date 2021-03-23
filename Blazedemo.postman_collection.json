@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "7df77d43-c642-4271-a5c3-eb21e1a22b67",
+		"name": "Blazedemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetReservationPage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Welcome to the Simple Travel Agency!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,ru;q=0.8"
+					}
+				],
+				"url": {
+					"raw": "http://blazedemo.com/",
+					"protocol": "http",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChooseCities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"BlazeDemo - reserve\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Origin",
+						"value": "http://blazedemo.com"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+					},
+					{
+						"key": "Referer",
+						"value": "http://blazedemo.com/"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,ru;q=0.8"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fromPort",
+							"value": "Boston^",
+							"type": "text"
+						},
+						{
+							"key": "toPort",
+							"value": "London",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://blazedemo.com/reserve.php",
+					"protocol": "http",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"reserve.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chooseflight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "blazedemo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "origin",
+						"value": "https://blazedemo.com"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document"
+					},
+					{
+						"key": "referer",
+						"value": "https://blazedemo.com/reserve.php"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "flight",
+							"value": "4346",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "233.98",
+							"type": "text"
+						},
+						{
+							"key": "airline",
+							"value": "Lufthansa",
+							"type": "text"
+						},
+						{
+							"key": "fromPort",
+							"value": "Boston",
+							"type": "text"
+						},
+						{
+							"key": "toPort",
+							"value": "London",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://blazedemo.com/purchase.php",
+					"protocol": "https",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"purchase.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay/GetConfirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Thank you for your purchase today!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "blazedemo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "origin",
+						"value": "https://blazedemo.com"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document"
+					},
+					{
+						"key": "referer",
+						"value": "https://blazedemo.com/purchase.php"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_token",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "inputName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "zipCode",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "cardType",
+							"value": "visa",
+							"type": "text"
+						},
+						{
+							"key": "creditCardNumber",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "creditCardMonth",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "creditCardYear",
+							"value": "2025",
+							"type": "text"
+						},
+						{
+							"key": "nameOnCard",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://blazedemo.com/confirmation.php",
+					"protocol": "https",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"confirmation.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
